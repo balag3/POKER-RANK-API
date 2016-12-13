@@ -9,6 +9,11 @@ def card_parser(arg):
     return [Card.new(arg[i:i+2]) for i in range(0, len(arg), 2) if i+1 <= len(arg)]
 
 
+@app.route('/', methods=['GET'])
+def setup():
+    return "working"
+
+
 @app.route('/<hand>/<board>', methods=['GET'])
 def main(hand, board):
     try:
