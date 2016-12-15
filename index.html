@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POKER RANK API</title>
+</head>
+<br>
+A simple TEXAS HOLD'EM poker hand ranking service.</br>
+Usage:</br>
+The API expects the following URL build:</br>
+/hand/board</br>
+Card format has to follow the conventional poker hand formatting rules:</br>
+Ace of spades : As</br>
+King of hearts : Kh</br>
+Ten of clubs : Tc</br>
+Deuce of diamonds : 2d</br>
+hand has to be exactly 2 cards long(4 characters)</br>
+board can be 3 to 5 cards long(6 to 10 characters)</br>
+example:</br>
+'/AcKs/As2c3c4c8d'</br>
+response is in json:</br>
+{</br>
+  "rank": "Pair",</br>
+  "strength": 3363</br>
+}</br>
+strength is valued on a scale of 1 to 7462, where 1 is a Royal Flush</br>
+and 7462 is unsuited 7-5-4-3-2, as there are only 7642 distinctly ranked hands in poker.</br>
+</body>
+</html>
