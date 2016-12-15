@@ -10,12 +10,12 @@ def card_parser(arg):
 
 
 @app.route('/', methods=['GET'])
-def setup():
-    return "working"
+def home():
+    return render_template('index.html')
 
 
 @app.route('/<hand>/<board>', methods=['GET'])
-def main(hand, board):
+def evaluate(hand, board):
     try:
         board = card_parser(board)
         hand = card_parser(hand)
